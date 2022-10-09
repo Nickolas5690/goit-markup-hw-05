@@ -26,7 +26,7 @@
           >
           <ul class="header-list list">
             <li class="header-item">
-              <a class="header-link link" href="./index.html">Студія</a>
+              <a class="header-link link" href="./index.html">Студія</a>              
             </li>
             <li class="header-item">
               <a class="header-link link" href="./portfolio.html">Портфоліо</a>
@@ -60,10 +60,20 @@
         <div class="overlay">
           <div class="container hero-div">
           <h1 class="hero-title">Ефективні рішення для <br>вашого бізнесу<br></h1>
-          <button class="hero-btn" type="button">Замовити послугу</button>
+          <button class="hero-btn" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </div>
-        
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <div class="modal-div">
+            <button class="modal-button" type="button" data-modal-close>
+            <svg class="modal-icon">
+              <use href="./images/icons.svg#icon-krest"></use>
+            </svg>
+            </button>
+          </div>          
+        </div>
+      </div>
       </section>
       <section class="hero-under-top-section">
         <div class="container">
@@ -121,13 +131,28 @@
           <h2 class="hero-midle-title">Чим ми займаємося</h2>
         <ul class="hero-midle-list">
           <li class="hero-midle-item list">
-            <img src="./images/box-1.jpg" alt="набирання коду" width="370" />
+            <div class="hero-midle-container">
+              <img class="hero-midle-img" src="./images/box-1.jpg" alt="набирання коду" width="370" />
+              <div class='hero-midle-div'>
+                <p class="hero-midle-text">Десктопні додатки</p>
+              </div>
+            </div>            
           </li>
           <li class="hero-midle-item list">
-            <img src="./images/box-2.jpg" alt="вибір дизайну" width="370" />
+            <div class="hero-midle-container">
+              <img class="hero-midle-img" src="./images/box-2.jpg" alt="вибір дизайну" width="370" />
+              <div class='hero-midle-div'>
+                <p class="hero-midle-text">Десктопні додатки</p>
+              </div>
+            </div>
           </li>
           <li class="hero-midle-item list">
-            <img src="./images/box-3.jpg" alt="вибір кольору" width="370" />
+            <div class="hero-midle-container">
+              <img class="hero-midle-img" src="./images/box-3.jpg" alt="вибір кольору" width="370" />
+              <div class='hero-midle-div'>
+                <p class="hero-midle-text">Десктопні додатки</p>
+              </div>
+            </div>
           </li>
         </ul>
         </div>        
@@ -349,5 +374,6 @@
       </div>
       </div>      
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
